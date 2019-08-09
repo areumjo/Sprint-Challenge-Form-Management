@@ -72,3 +72,8 @@ button {
   outline: none;
   -webkit-appearance: none;
 }
+
+li {
+  list-style: none;
+  padding: 5px 0;
+}

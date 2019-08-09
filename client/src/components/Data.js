@@ -1,6 +1,8 @@
 import React from 'react';
 import axios from 'axios';
 
+import { Card } from 'semantic-ui-react';
+
 class Data extends React.Component{
     constructor() {
         super();
@@ -20,14 +22,16 @@ class Data extends React.Component{
     render() {
         return(
             <div>
-                <h2>Now you can see this...</h2>
+                <h2 style={{marginTop: "20px"}}>Now you can see this...</h2>
                 {this.state.userData.map(e => 
-                <div>
-                    <h2 key={e.name}>{e.name}</h2>
-                    <h3 key={e.course}>{e.course}</h3>
-                    <h2 key={e.technique}>{e.technique}</h2>
-                    <p key={e.ingredients}>{e.ingredients.map(i => `${i}, `)}</p>
-                </div>)}
+                <Card centered className="card-container" key={e.name}>
+                    <Card.Content>
+                        <Card.Header key={e.name}>{e.name}</Card.Header>
+                        <Card.Meta key={e.course}>{e.course}</Card.Meta>
+                        <Card.Meta key={e.technique}>{e.technique}</Card.Meta>
+                        <Card.Description key={e.ingredients}>{e.ingredients.map(i => `${i}, `)}</Card.Description>
+                    </Card.Content>
+                </Card>)}
                 
             </div>
         )
