@@ -4,6 +4,7 @@ import { Route } from 'react-router-dom';
 
 import Registration from './components/Registration.js';
 import Login from './components/Login.js';
+import Data from './components/Data.js';
 
 function App() {
 
@@ -14,6 +15,7 @@ function App() {
       </header>
       <Route exact path="/" component={Registration} />
       <Route path="/login" component={Login} />
+      <Route path="/data" component={Data} />
     </div>
   );
 }

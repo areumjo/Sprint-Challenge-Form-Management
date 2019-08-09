@@ -30,7 +30,7 @@ const Registration = ({ values, touched, errors, status }) => {
                 
                 <button type="submit" data-testid="ok-button">Submit</button>
             </Form>
-            {users.map(u => <p key={u.username}>{u.username}</p>)}
+            {users.map(u => <p data-testid="ok-display" key={u.username}>{u.username}</p>)}
         </div>
     )
 }

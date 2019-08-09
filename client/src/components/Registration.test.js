@@ -11,8 +11,21 @@ describe('<Registration />', () => {
     it('submit button?', () => {
         const container = render(<Registration />);
         const button = container.getByTestId('ok-button')
-        expect(button.getAttribute('type')).toBe('submit');        
-        fireEvent.click(button);
+        expect(button.getAttribute('type')).toBe('submit');
+
+        // const username = container.getByPlaceholderText('Username')
+        // fireEvent.change(username, { target: { value: 'user' } })
+
+        // const password = container.getByPlaceholderText('Password')
+        // fireEvent.change(password, { target: { value: 'pwpwpwpw' } })        
+
+        // fireEvent.click(button);
+
+        // const display = container.queryByTestId('ok-display');
+        // expect(display.getAttribute('key')).toBe('user')
+
+
+
 
         // const userData = container.getByTestId('ok-user');
         
