@@ -21,9 +21,9 @@ const Registration = ({ values, touched, errors, status }) => {
                 {touched.username && errors.username && <p className="error">{errors.username}</p>}
                 <Field type="password" name="password" placeholder="Paswword" />
                 {touched.password && errors.password && <p className="error">{errors.password}</p>}
-                <button type="submit">Submit</button>
+                <button type="submit" data-testid="ok-button">Submit</button>
             </Form>
-            {users.map(u => <p>{u.username}</p>)}
+            {users.map(u => <p data-testid="ok-user">{u.username}</p>)}
         </div>
     )
 }
