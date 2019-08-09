@@ -8,7 +8,7 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <h2>Sprint setting up</h2>
+        <h1>Welcome to A-React</h1>
       </header>
       <Registration />
     </div>
