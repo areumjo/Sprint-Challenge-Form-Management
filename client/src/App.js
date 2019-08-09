@@ -1,7 +1,9 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './App.css';
+import { Route } from 'react-router-dom';
 
 import Registration from './components/Registration.js';
+import Login from './components/Login.js';
 
 function App() {
 
@@ -10,7 +12,8 @@ function App() {
       <header className="App-header">
         <h1>Welcome to A-React</h1>
       </header>
-      <Registration />
+      <Route exact path="/" component={Registration} />
+      <Route path="/login" component={Login} />
     </div>
   );
 }
