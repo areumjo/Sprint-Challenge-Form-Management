@@ -25,14 +25,33 @@ In the challenge for this Sprint, you will demonstrate proficiency by creating a
 Demonstrate your understanding of this Sprint's concepts by answering the following free-form questions. Edit this document to include your answers after each question. Make sure to leave a blank line above and below your answer so it is clear and easy to read by your project manager.
 
 - [ ] What are the required parts of class components?
+    - When you declare class component with `extends React.Component`, we gain access to methods provided from the React API.
+    - `render` decides what will be presented on the web page.
 
 - [ ] Name at least three lifecycle methods?
+    1. `constructor()`
+        - used to load in initial state data
+        - will set the component up with the data that it needs 'before' it gets mounted to the DOM
+    2. `render()`
+        - when triggeed, UI gets rendered to the DOM
+        - involved in not only the `Mounting` phase but also the `Updating` phase as well
+    3. `componentDidMount()`
+        - will be a part of mounting phase and be invoked 'immediately after' render gets called
+        - can call `setState` and it forces a re-render of component
+            - is used for any async data loading that you'd need to have on state during render
+            - asynchronous actions should be performed inside of this like fetching data via HTTP
 
 - [ ] Why are forms used so often in web applications and software?
+    - Form allows a user to enter data that is sent to a server and web application can receive and display data simultaneously.
 
 - [ ] What advantages are there by using a forms library like Formik?
+    - Formik automatically and locally manages form state.
+    - Formik validates using Formik's validation handlers and `Yup`.
+    - Formik handles form submission which makes us easy value parsing and error formatting, via handler functions passed into Formik.
 
 - [ ] Why do we write tests for our apps?
+    - Testing minimized the risk of bugs. It surfaces bugs faster and allows us to trust the code we are working on.
+    - Testing acts as a safety net when making changes or refactoring.
 
 ## Project Set Up
 
